@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import ResultForm from '../../ResultForm';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-driven-form.component.css']
 })
 export class TemplateDrivenFormComponent implements OnInit {
-
+  result:ResultForm;
+  
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+

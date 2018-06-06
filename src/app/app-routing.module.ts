@@ -6,7 +6,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 
 const routes: Routes = [
   {path: 'model', component: ModelDrivenFormComponent},
-  {path: 'template', component: TemplateDrivenFormComponent}
+  {path: 'template', component: TemplateDrivenFormComponent},
+  {path: '', redirectTo: '/model', pathMatch: 'full' }
 ]
 
 @NgModule({
