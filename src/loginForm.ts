@@ -1,4 +1,4 @@
-export default class ResultForm{
+export default class loginForm{
     userName: string;
     password: string;
   }
