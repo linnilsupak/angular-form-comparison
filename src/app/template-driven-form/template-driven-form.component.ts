@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import loginForm from '../../loginForm';
 
 @Component({
@@ -7,12 +8,21 @@ import loginForm from '../../loginForm';
   styleUrls: ['./template-driven-form.component.css']
 })
 export class TemplateDrivenFormComponent implements OnInit {
-  result:loginForm;
+  result: loginForm;
 
-  
-  constructor() { }
+  login: loginForm;
+
+
+  constructor() {
+    this.login = new loginForm();
+    console.log('this.login',this.login)
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.result = this.login;
   }
 
 }
