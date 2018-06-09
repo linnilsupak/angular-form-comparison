@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import LoginForm from '../../LoginForm';
-import { FormGroup, FormControl} from '@angular/forms'
+import { FormGroup, FormControl, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-model-driven-form',
@@ -10,15 +10,19 @@ import { FormGroup, FormControl} from '@angular/forms'
 export class ModelDrivenFormComponent implements OnInit {
   result:LoginForm;
   loginForm: FormGroup;
+  userName: FormControl;
+  password: FormControl;
 
   constructor() {
-    this.loginForm = new FormGroup({
-      userName: new FormControl(),
-      password: new FormControl()
-    })
+    this.userName = new FormControl('',[Validators.required]);
+    this.password = new FormControl('',[Validators.required,Validators.minLength(6)]);
    }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      userName: this.userName,
+      password: this.password
+    })
   }
 
 }
