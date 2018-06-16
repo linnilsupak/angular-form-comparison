@@ -45,6 +45,8 @@ git checkout comparison
 [in-progress]
 
 ## In Conclusion
-Model Driven Form have a friendly code structor which is easier for maintenance than template driven form.
-And the Model Driven Form support the unit test too. From this two points, you can see it is better to write in model driven form than template driven form.
++ Model Driven Form have a friendly code structure which is easier for maintenance than template driven form.
++ And the Model Driven Form support the unit test too. 
+
+From this two points, you can see it is better to write in model driven form than template driven form.
 
