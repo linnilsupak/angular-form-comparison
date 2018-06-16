@@ -1,27 +1,33 @@
-# AngularFormComparation
+# Angular Form Comparison
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+This project is the homework for understand and comparing what different in Template Driven Form and Model Driven Form in Angular(2+).
+You can go into the homework and create a new branch to try coding the angular form yourself. And you can compare your result with the answer in this repository.
 
-## Development server
+## Starter
+1. Clone this github repository
+```shell
+git clone https://github.com/linnilsupak/angular-form-comparison.git
+```
+Create a new branch from the master branch as a start up project.
+```shell
+git checkout -b [name_of_your_new_branch]
+```
+3. go into the homework step to creating the angular login form.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Homework
+1. On your own branch create from starter, create a login form with template driven form on template-driven-form component.
+2. On your own branch, create a login form with model driven form on model-driven-form component.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## How to look at the answer
++ To look into the answer for homework#1, change the branch to template-driven-form-answer. 
+```shell
+git checkout template-driven-form-answer
+```
++ To look into the answer for homework#2, change the branch to model-driven-form-answer.
+```shell
+git checkout model-driven-form-answer
+```
++ To only look at the final result and comparing what different between two angular form, change the branch to comparison.
+```shell
+git checkout comparison
+```
