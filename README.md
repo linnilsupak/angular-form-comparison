@@ -18,6 +18,7 @@ git checkout -b [name_of_your_new_branch]
 On your own branch create from starter, create a login form with two inputs: username and password. If user still did not input the valid value, the form must not let the user submit the form and tell the user why they can not. The condition for valid input fields are as below.
 + username: required the value
 + password: required the value and the password must be long or longer than 6 characters.
+
 We have 3 homeworks for you in total, please look below to complete them.
 1. Create the homework form with template driven form on template-driven-form component.
 <a href='https://codecraft.tv/courses/angular/forms/template-driven/'>Template Driven Form Tutorial Link</a>
@@ -44,6 +45,6 @@ git checkout comparison
 [in-progress]
 
 ## In Conclusion
-Model Driven Form have a friendly code structor which it easier for maintenance than template driven form.
+Model Driven Form have a friendly code structor which is easier for maintenance than template driven form.
 And the Model Driven Form support the unit test too. From this two points, you can see it is better to write in model driven form than template driven form.
 
