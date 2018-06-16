@@ -15,7 +15,7 @@ git checkout -b [name_of_your_new_branch]
 3. go into the homework to creating the angular login form.
 
 ## Homework
-> On your own branch create from starter, create a login form with two inputs: username and password. If user still did not input the valid value, the form must not let the user submit the form and tell the user why they can not. The condition for valid input fields are as below.
+On your own branch create from starter, create a login form with two inputs: username and password. If user still did not input the valid value, the form must not let the user submit the form and tell the user why they can not. The condition for valid input fields are as below.
 + username: required the value
 + password: required the value and the password must be long or longer than 6 characters.
 We have 3 homeworks for you in total, please look below to complete them.
