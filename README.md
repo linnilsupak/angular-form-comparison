@@ -16,9 +16,14 @@ git checkout -b [name_of_your_new_branch]
 
 ## Homework
 1. On your own branch create from starter, create a login form with template driven form on template-driven-form component.
+(Please put validation into the form for user name and password too.)
 <a href='https://codecraft.tv/courses/angular/forms/template-driven/'>Template Driven Form Tutorial Link</a>
 2. On your own branch, create a login form with model driven form on model-driven-form component.
+(Please put validation into the form for user name and password too.)
 <a href='https://codecraft.tv/courses/angular/forms/model-driven/'>Model Driven Form Tutorial Link</a>
+<a href='https://codecraft.tv/courses/angular/forms/model-driven-validation/'>Model Driven Form Validatoin Tutorial Link</a>
+3. Continue from model-driven-form component, you can write unit test for the login form on model-driven-form.component.spec.ts file.
+<a href='https://codecraft.tv/courses/angular/unit-testing/model-driven-forms/'>Model Driven Form Unit Test Tutorial Link</a>
 
 ## How to look at the answer
 + To look into the answer for homework#1, change the branch to template-driven-form-answer. 
@@ -33,6 +38,9 @@ git checkout model-driven-form-answer
 ```shell
 git checkout comparison
 ```
++ To look into the answer for homework#3, change the branch to test-unit.
+[in-progress]
+
 ## In Conclusion
 Model Driven Form have a friendly code structor which it easier for maintenance than template driven form.
 And the Model Driven Form support the unit test too. From this two points, you can see it is better to write in model driven form than template driven form.
