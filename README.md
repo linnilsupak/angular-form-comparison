@@ -15,11 +15,13 @@ git checkout -b [name_of_your_new_branch]
 3. go into the homework to creating the angular login form.
 
 ## Homework
-1. On your own branch create from starter, create a login form with template driven form on template-driven-form component.
-(Please put validation into the form for user name and password too.)
+> On your own branch create from starter, create a login form with two inputs: username and password. If user still did not input the valid value, the form must not let the user submit the form and tell the user why they can not. The condition for valid input fields are as below.
++ username: required the value
++ password: required the value and the password must be long or longer than 6 characters.
+We have 3 homeworks for you in total, please look below to complete them.
+1. Create the homework form with template driven form on template-driven-form component.
 <a href='https://codecraft.tv/courses/angular/forms/template-driven/'>Template Driven Form Tutorial Link</a>
-2. On your own branch, create a login form with model driven form on model-driven-form component.
-(Please put validation into the form for user name and password too.)
+2. Create the homework form with model driven form on model-driven-form component.
 <a href='https://codecraft.tv/courses/angular/forms/model-driven/'>Model Driven Form Tutorial Link</a>
 <a href='https://codecraft.tv/courses/angular/forms/model-driven-validation/'>Model Driven Form Validatoin Tutorial Link</a>
 3. Continue from model-driven-form component, you can write unit test for the login form on model-driven-form.component.spec.ts file.
