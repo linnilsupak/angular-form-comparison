@@ -5,13 +5,9 @@ import { AppComponent } from './app.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { AppRoutingModule } from './/app-routing.module';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {FormsModule} from '@angular/forms';
+import { MaterialModule } from './materia.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +17,7 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
+    MaterialModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
