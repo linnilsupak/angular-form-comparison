@@ -2,15 +2,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModelDrivenFormComponent } from './model-driven-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../materia.module';
 
 describe('ModelDrivenFormComponent', () => {
   let component: ModelDrivenFormComponent;
   let fixture: ComponentFixture<ModelDrivenFormComponent>;
-  let email;
+  let userName;
+  let password;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, ReactiveFormsModule],
+      imports: [FormsModule, ReactiveFormsModule, MaterialModule],
       declarations: [ModelDrivenFormComponent]
     })
       .compileComponents();
@@ -22,7 +24,8 @@ describe('ModelDrivenFormComponent', () => {
     // fixture.detectChanges();
     component.ngOnInit();
 
-    email = component.loginForm.controls['email'];
+    userName = component.loginForm.controls['userName'];
+    password = component.loginForm.controls['password'];
   });
 
   it('should create', () => {
@@ -33,18 +36,36 @@ describe('ModelDrivenFormComponent', () => {
     expect(component.loginForm.valid).toBeFalsy;
   });
 
-  it('email field must be invalid when empty', () => {
-    expect(email.valid).toBeFalsy;
+  it('form valid when input is valid',()=>{
+    userName.setValue('linnil');
+    password.setValue('test12');
+    expect(component.loginForm.valid).toBeTruthy;
+  })
+
+  it('userName field must be invalid when empty', () => {
+    expect(userName.valid).toBeFalsy;
   });
 
-  it('email field must return required error when empty', () => {
+  it('userName field must return required error when empty', () => {
     let errors = {};
-    errors = email.errors || {};
+    errors = userName.errors || {};
     expect(errors['required']).toBeTruthy;
   });
 
+  it('password field must be invalid when empty', () => {
+    expect(password.valid).toBeFalsy;
+  })
 
+  it('password field must return required error when empty', () => {
+    let errors = {};
+    errors = password.errors || {};
+    expect(errors['required']).toBeTruthy;
+  });
 
-
-
+  it('password field must returned min error when it lesser than 6',() =>{
+  let errors = {};
+  password.setValue('tests');
+  errors = password.error || {};
+  expect(errors['minLength']).toBeTruthy;
+  });
 });
