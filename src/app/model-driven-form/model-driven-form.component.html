@@ -1,5 +1,5 @@
 <h2>Login Form</h2>
-<form>
+<form [formGroup]="loginForm" (ngSubmit)='onSubmit()'>
   <mat-form-field>
     <input type="text" matInput placeholder="User Name" value="">
   </mat-form-field>
@@ -8,11 +8,12 @@
     <input type="password" matInput placeholder="Password" value="">
   </mat-form-field>
   <br>
-  <button mat-raised-button color="primary">Login</button>
+  <button type="submit" mat-raised-button color="primary">Login</button>
 </form>
 <br>
 <br>
 <ng-container *ngIf="result">
+  <h1>Login Success</h1>
   <h2>Result Submitted Form:</h2>
   <pre>
   {{result | json}}

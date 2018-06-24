@@ -16,7 +16,7 @@ export class TemplateDrivenFormComponent implements OnInit {
     this.login = new Person();
     console.log('this.login',this.login)
   }
- 
+
   ngOnInit() {
   }
 
