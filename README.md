@@ -25,8 +25,12 @@ We have 3 homeworks for you in total, please look below to complete them.
 2. Create the homework form with model driven form on model-driven-form component.
 <a href='https://codecraft.tv/courses/angular/forms/model-driven/'>Model Driven Form Tutorial Link</a>
 <a href='https://codecraft.tv/courses/angular/forms/model-driven-validation/'>Model Driven Form Validatoin Tutorial Link</a>
-3. Continue from model-driven-form component, you can write unit test for the login form on model-driven-form.component.spec.ts file.
+3. Create unit test for app component. Import all the module need on this compponent and router test in app.component.spect.ts
+<a href='https://codecraft.tv/courses/angular/unit-testing/routing/'>Router Test Link</a>
+4. Continue from model-driven-form component, you can write unit test for the login form on model-driven-form.component.spec.ts file.
 <a href='https://codecraft.tv/courses/angular/unit-testing/model-driven-forms/'>Model Driven Form Unit Test Tutorial Link</a>
+5. Continue from template-driven-form component, you can write unit test for the login form on template-driven-form.component.spec.ts file.
+<a href='https://codecraft.tv/courses/angular/unit-testing/components/'>Model Driven Form Unit Test Tutorial Link</a>
 
 ## How to look at the answer
 + To look into the answer for homework#1, change the branch to template-driven-form-answer. 
@@ -41,8 +45,10 @@ git checkout model-driven-form-answer
 ```shell
 git checkout comparison
 ```
-+ To look into the answer for homework#3, change the branch to test-unit.
-[in-progress]
++ To look into the answer for homework#3, #4 and #5, change the branch to test-unit.
+```shell
+git checkout test-unit
+```
 
 ## In Conclusion
 + Model Driven Form have a friendly code structure which is easier for maintenance than template driven form.
