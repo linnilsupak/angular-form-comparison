@@ -54,6 +54,10 @@ git checkout comparison
 ```shell
 git checkout test-unit
 ```
++ To look into the answer for homework#6, change the branch to test-e2e.
+```shell
+git checkout test-e2e
+```
 
 ## In Conclusion
 + Model Driven Form have a friendly code structure which is easier for maintenance and unit test than template driven form.
