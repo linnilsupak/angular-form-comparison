@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import LoginForm from '../../LoginForm';
+import Person from '../../person';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
 
 @Component({
@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms'
   styleUrls: ['./model-driven-form.component.css']
 })
 export class ModelDrivenFormComponent implements OnInit {
-  result:LoginForm;
+  result:Person;
   loginForm: FormGroup;
   userName: FormControl;
   password: FormControl;

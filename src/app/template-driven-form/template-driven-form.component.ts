@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import LoginForm from '../../LoginForm';
+import Person from '../../person';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -7,12 +7,21 @@ import LoginForm from '../../LoginForm';
   styleUrls: ['./template-driven-form.component.css']
 })
 export class TemplateDrivenFormComponent implements OnInit {
-  result:LoginForm;
+  result:Person;
 
-  
-  constructor() { }
+  login: Person;
 
+
+  constructor() {
+    this.login = new Person();
+    console.log('this.login',this.login)
+  }
+ 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.result = this.login;
   }
 
 }
