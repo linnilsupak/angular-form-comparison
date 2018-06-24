@@ -69,4 +69,16 @@ describe('ModelDrivenFormComponent', () => {
     errors = password.error || {};
     expect(errors['minLength']).toBeTruthy;
   });
+
+  it('onsubmit if form invalid, it should do nothing', ()=>{
+    component.onSubmit();
+    expect(component.result).toBeFalsy;
+  });
+  
+  it('onsubmit if form valid, it should do nothing', ()=>{
+    userName.setValue('linnil');
+    password.setValue('test12');
+    component.onSubmit();
+    expect(component.result).toBeTruthy;
+  });
 });
