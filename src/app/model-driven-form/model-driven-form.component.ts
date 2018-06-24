@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import LoginForm from '../../LoginForm';
+import Person from '../../person';
 
 @Component({
   selector: 'app-model-driven-form',
@@ -7,7 +7,7 @@ import LoginForm from '../../LoginForm';
   styleUrls: ['./model-driven-form.component.css']
 })
 export class ModelDrivenFormComponent implements OnInit {
-  result:LoginForm;
+  result:Person;
 
   constructor() { }
 
