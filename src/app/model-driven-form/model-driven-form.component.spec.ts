@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModelDrivenFormComponent } from './model-driven-form.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../materia.module';
 
 describe('ModelDrivenFormComponent', () => {
@@ -12,7 +12,7 @@ describe('ModelDrivenFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ ReactiveFormsModule, MaterialModule],
+      imports: [ReactiveFormsModule, MaterialModule],
       declarations: [ModelDrivenFormComponent]
     })
       .compileComponents();
@@ -36,7 +36,7 @@ describe('ModelDrivenFormComponent', () => {
     expect(component.loginForm.valid).toBeFalsy;
   });
 
-  it('form valid when input is valid',()=>{
+  it('form valid when input is valid', () => {
     userName.setValue('linnil');
     password.setValue('test12');
     expect(component.loginForm.valid).toBeTruthy;
@@ -62,10 +62,10 @@ describe('ModelDrivenFormComponent', () => {
     expect(errors['required']).toBeTruthy;
   });
 
-  it('password field must returned min error when it lesser than 6',() =>{
-  let errors = {};
-  password.setValue('tests');
-  errors = password.error || {};
-  expect(errors['minLength']).toBeTruthy;
+  it('password field must returned min error when it lesser than 6', () => {
+    let errors = {};
+    password.setValue('tests');
+    errors = password.error || {};
+    expect(errors['minLength']).toBeTruthy;
   });
 });
