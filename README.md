@@ -36,7 +36,7 @@ We have 6 homeworks for you in total, please look below to complete them.
 5. Continue from template-driven-form component, you can write unit test for the login form on template-driven-form.component.spec.ts file.
 <a href='https://codecraft.tv/courses/angular/unit-testing/components/'>Model Driven Form Unit Test Tutorial Link</a>
 6. For the final step, try creating e2e test for both Angular forms.
-[In-Progress]
+
 
 ## Useful Angular CLI 
 + To builds your application and starts a web server. Use below angular CLI command and then open http://localhost:4200/
@@ -73,7 +73,7 @@ git checkout comparison
 ```shell
 git checkout test-unit
 ```
-+ To look into the answer for homework#6, change the branch to test-e2e.
++ To look into the answer for homework#6, change the branch to test-e2e.[In-Progress]
 ```shell
 git checkout test-e2e
 ```
