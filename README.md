@@ -39,12 +39,22 @@ We have 6 homeworks for you in total, please look below to complete them.
 
 
 ## Useful Angular CLI 
-+ To builds your application and starts a web server.
++ To builds your application and starts a web server. Use below angular CLI command and then open http://localhost:4200/
 ```shell
-ng serve angular-form-comparison
+ng serve
 ```
-+ 
-
++ To run Unit Test.
+```shell
+ng test
+```
++ To run Unit Test and print coverage report. You can open \coverage\index.html and see the coverage report.
+```shell
+ng test --code-coverage
+```
++ To run end to end test.
+```shell
+ng e2e
+```
 
 ## How to look at the answer
 + To look into the answer for homework#1, change the branch to template-driven-form-answer. 
