@@ -59,8 +59,4 @@ git checkout test-unit
 git checkout test-e2e
 ```
 
-## In Conclusion
-+ Model Driven Form have a friendly code structure which is easier for maintenance and unit test than template driven form.
-
-From this two points, you can see it is better to write in model driven form than template driven form.
 
