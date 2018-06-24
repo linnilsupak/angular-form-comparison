@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModelDrivenFormComponent } from './model-driven-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../materia.module';
 
 describe('ModelDrivenFormComponent', () => {
@@ -12,7 +12,7 @@ describe('ModelDrivenFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, ReactiveFormsModule, MaterialModule],
+      imports: [ ReactiveFormsModule, MaterialModule],
       declarations: [ModelDrivenFormComponent]
     })
       .compileComponents();
