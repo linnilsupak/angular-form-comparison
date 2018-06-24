@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import Person from '../../person';
 
 @Component({
@@ -16,7 +17,7 @@ export class TemplateDrivenFormComponent implements OnInit {
     this.login = new Person();
     console.log('this.login',this.login)
   }
- 
+
   ngOnInit() {
   }
 

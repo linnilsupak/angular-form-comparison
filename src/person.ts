@@ -3,7 +3,7 @@ export default class Person{
     password: string;
 
     constructor(obj?:any){
-      this.userName = (obj && obj.userName)  || '';
-      this.password = (obj && obj.password )|| '';
+      this.userName = (obj && obj.userName) || '';
+      this.password = (obj && obj.password) || '';
     }
   }
