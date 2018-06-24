@@ -8,11 +8,15 @@ You can go into the homework and create a new branch to try coding the angular f
 ```shell
 git clone https://github.com/linnilsupak/angular-form-comparison.git
 ```
-2. Create a new branch from the master branch as a start up project.
+2. Checkout homework-base branch
+```shell
+git checkout homework-base
+```
+3. Create a new branch from the master branch as a start up project.
 ```shell
 git checkout -b [name_of_your_new_branch]
 ```
-3. go into the homework to creating the angular login form.
+4. go into the homework to creating the angular login form.
 
 ## Homework
 On your own branch create from starter, create a login form with two inputs: username and password. If user still did not input the valid value, the form must not let the user submit the form and tell the user why they can not. The condition for valid input fields are as below.
