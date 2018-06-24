@@ -21,7 +21,7 @@ describe('ModelDrivenFormComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ModelDrivenFormComponent);
     component = fixture.componentInstance;
-    // fixture.detectChanges();
+    fixture.detectChanges();
     component.ngOnInit();
 
     userName = component.loginForm.controls['userName'];

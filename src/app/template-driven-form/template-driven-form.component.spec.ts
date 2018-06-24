@@ -73,7 +73,4 @@ describe('TemplateDrivenFormComponent', () => {
     console.log(formEl.nativeElement.password.error)
     expect(errors['minlength']).toBeTruthy;
   });
-  // it('form invalid when empty', () => {
-  //   expect(component.loginForm.valid).toBeFalsy;
-  // });
 });
