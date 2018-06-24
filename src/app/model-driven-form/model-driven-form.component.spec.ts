@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ModelDrivenFormComponent } from './model-driven-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../materia.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ModelDrivenFormComponent', () => {
   let component: ModelDrivenFormComponent;
@@ -12,7 +13,7 @@ describe('ModelDrivenFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, MaterialModule],
+      imports: [ReactiveFormsModule, MaterialModule,BrowserAnimationsModule],
       declarations: [ModelDrivenFormComponent]
     })
       .compileComponents();
