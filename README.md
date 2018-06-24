@@ -37,6 +37,15 @@ We have 6 homeworks for you in total, please look below to complete them.
 <a href='https://codecraft.tv/courses/angular/unit-testing/components/'>Model Driven Form Unit Test Tutorial Link</a>
 6. For the final step, try creating e2e test for both Angular forms.
 
+
+## Useful Angular CLI 
++ To builds your application and starts a web server.
+```shell
+ng serve angular-form-comparison
+```
++ 
+
+
 ## How to look at the answer
 + To look into the answer for homework#1, change the branch to template-driven-form-answer. 
 ```shell
@@ -58,5 +67,4 @@ git checkout test-unit
 ```shell
 git checkout test-e2e
 ```
-
 
