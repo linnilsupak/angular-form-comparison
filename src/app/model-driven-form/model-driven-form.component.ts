@@ -24,5 +24,10 @@ export class ModelDrivenFormComponent implements OnInit {
       password: this.password
     })
   }
+  onSubmit(){
+    if(this.loginForm.valid){
+      this.result = this.loginForm.value;
+    }
+  }
 
 }
