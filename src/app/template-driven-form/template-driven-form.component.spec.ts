@@ -73,4 +73,22 @@ describe('TemplateDrivenFormComponent', () => {
     console.log(formEl.nativeElement.password.error)
     expect(errors['minlength']).toBeTruthy;
   });
+  
+  it('onsubmit if form invalid, login button disabled', ()=>{
+    component.onSubmit();
+    expect(submitEl.nativeElement.disabled).toBeTruthy;
+  });
+  
+  it('onsubmit if form valid, login button enabled', ()=>{
+    userNameEl.nativeElement.value = "linnil";
+    passwordEl.nativeElement.value = "test12";
+    expect(submitEl.nativeElement.disabled).toBeFalsy;
+  });
+  
+  it('on submit must create result', ()=>{
+    userNameEl.nativeElement.value = "linnil";
+    passwordEl.nativeElement.value = "test12";
+    component.onSubmit();
+    expect(component.result).toBeTruthy;
+  });
 });

@@ -4,8 +4,12 @@ export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
-
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  
+  getModelDrivenButton() {
+    return element(by.cssContainingText('mat-button-toggle','Model Driven Form'));
   }
+  getTemplateDrivenButton() {
+    return element(by.cssContainingText('mat-button-toggle','Template Driven Form'));
+  }
+
 }
