@@ -29,56 +29,60 @@ describe('ModelDrivenFormComponent', () => {
     password = component.loginForm.controls['password'];
   });
 
+  afterEach(()=>{
+    fixture.destroy();
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
   it('form invalid when empty', () => {
-    expect(component.loginForm.valid).toBeFalsy;
+    expect(component.loginForm.valid).toBeFalsy();
   });
 
   it('form valid when input is valid', () => {
     userName.setValue('linnil');
     password.setValue('test12');
-    expect(component.loginForm.valid).toBeTruthy;
+    expect(component.loginForm.valid).toBeTruthy();
   })
 
   it('userName field must be invalid when empty', () => {
-    expect(userName.valid).toBeFalsy;
+    expect(userName.valid).toBeFalsy();
   });
 
   it('userName field must return required error when empty', () => {
     let errors = {};
     errors = userName.errors || {};
-    expect(errors['required']).toBeTruthy;
+    expect(errors['required']).toBeTruthy();
   });
 
   it('password field must be invalid when empty', () => {
-    expect(password.valid).toBeFalsy;
+    expect(password.valid).toBeFalsy();
   })
 
   it('password field must return required error when empty', () => {
     let errors = {};
     errors = password.errors || {};
-    expect(errors['required']).toBeTruthy;
+    expect(errors['required']).toBeTruthy();
   });
 
   it('password field must returned min error when it lesser than 6', () => {
     let errors = {};
     password.setValue('tests');
     errors = password.error || {};
-    expect(errors['minLength']).toBeTruthy;
+    expect(errors['minLength']).toBeTruthy();
   });
 
   it('onsubmit if form invalid, it should do nothing', ()=>{
     component.onSubmit();
-    expect(component.result).toBeFalsy;
+    expect(component.result).toBeFalsy();
   });
   
   it('onsubmit if form valid, it should do nothing', ()=>{
     userName.setValue('linnil');
     password.setValue('test12');
     component.onSubmit();
-    expect(component.result).toBeTruthy;
+    expect(component.result).toBeTruthy();
   });
 });

@@ -1,7 +1,10 @@
 <h2>Login Form</h2>
 <form>
   <mat-form-field>
-    <input type="text" matInput placeholder="User Name" value="">
+    <input type="text" matInput placeholder="User Name" name="userName" #userName="ngModel" [(ngModel)]="login.userName" required>
+    <mat-error *ngIf="userName?.errors && userName?.errors.required && (userName?.dirty || userName?.touched)">
+        Username required!
+      </mat-error>
   </mat-form-field>
   <br>
   <mat-form-field>
