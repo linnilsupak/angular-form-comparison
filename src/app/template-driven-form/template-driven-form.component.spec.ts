@@ -34,6 +34,10 @@ describe('TemplateDrivenFormComponent', () => {
     fixture.detectChanges();
   });
 
+  afterEach(()=>{
+    fixture.destroy();
+  });
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -43,27 +47,27 @@ describe('TemplateDrivenFormComponent', () => {
     userNameEl.nativeElement.value = "linnil";
     passwordEl.nativeElement.value = "test12";
 
-    expect(formEl.nativeElement.invalid).toBeFalsy;
+    expect(formEl.nativeElement.invalid).toBeFalsy();
   });
 
   it('userName field must be invalid when empty', () => {
-    expect(formEl.nativeElement.userName.valid).toBeFalsy;
+    expect(formEl.nativeElement.userName.valid).toBeFalsy();
   });
 
   it('userName field must return required error when empty', () => {
     let errors = {};
     errors = formEl.nativeElement.userName.errors || {};
-    expect(errors['required']).toBeTruthy;
+    expect(errors['required']).toBeTruthy();
   });
 
   it('password field must be invalid when empty', () => {
-    expect(formEl.nativeElement.password.valid).toBeFalsy;
+    expect(formEl.nativeElement.password.valid).toBeFalsy();
   })
 
   it('password field must return required error when empty', () => {
     let errors = {};
     errors = formEl.nativeElement.password.errors || {};
-    expect(errors['required']).toBeTruthy;
+    expect(errors['required']).toBeTruthy();
   });
 
   it('password field must returned min error when it lesser than 6', () => {
@@ -71,24 +75,24 @@ describe('TemplateDrivenFormComponent', () => {
     formEl.nativeElement.password.value = 'tests';
     errors = formEl.nativeElement.password.error || {};
     console.log(formEl.nativeElement.password.error)
-    expect(errors['minlength']).toBeTruthy;
+    expect(errors['minlength']).toBeTruthy();
   });
   
   it('onsubmit if form invalid, login button disabled', ()=>{
     component.onSubmit();
-    expect(submitEl.nativeElement.disabled).toBeTruthy;
+    expect(submitEl.nativeElement.disabled).toBeTruthy();
   });
   
   it('onsubmit if form valid, login button enabled', ()=>{
     userNameEl.nativeElement.value = "linnil";
     passwordEl.nativeElement.value = "test12";
-    expect(submitEl.nativeElement.disabled).toBeFalsy;
+    expect(submitEl.nativeElement.disabled).toBeFalsy();
   });
   
   it('on submit must create result', ()=>{
     userNameEl.nativeElement.value = "linnil";
     passwordEl.nativeElement.value = "test12";
     component.onSubmit();
-    expect(component.result).toBeTruthy;
+    expect(component.result).toBeTruthy();
   });
 });
