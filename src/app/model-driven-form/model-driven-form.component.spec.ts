@@ -69,9 +69,9 @@ describe('ModelDrivenFormComponent', () => {
 
   it('password field must returned min error when it lesser than 6', () => {
     let errors = {};
-    password.setValue('tests');
-    errors = password.error || {};
-    expect(errors['minLength']).toBeTruthy();
+    password.setValue('12345');
+    errors = password.errors || {};
+    expect(errors['minlength']).toBeTruthy();
   });
 
   it('onsubmit if form invalid, it should do nothing', ()=>{

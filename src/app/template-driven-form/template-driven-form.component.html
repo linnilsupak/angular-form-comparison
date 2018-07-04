@@ -2,7 +2,7 @@
 <form #f="ngForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input type="text" matInput placeholder="User Name" name="userName" #userName="ngModel" [(ngModel)]="login.userName" required>
-    <mat-error *ngIf="userName?.errors && userName?.errors.required && (userName?.dirty || userName?.touched)">
+    <mat-error name="errorUserNameRequired" *ngIf="userName?.errors && userName?.errors.required && (userName?.dirty || userName?.touched)">
         Username required!
       </mat-error>
   </mat-form-field>
