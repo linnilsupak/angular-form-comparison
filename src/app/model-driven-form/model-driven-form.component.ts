@@ -13,9 +13,16 @@ export class ModelDrivenFormComponent implements OnInit {
   userName: FormControl;
   password: FormControl;
 
-  constructor() { }
+  constructor() {
+    this.userName = new FormControl('',[Validators.required]);
+    this.password = new FormControl('',[Validators.required,Validators.minLength(6)]);
+   }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      userName: this.userName,
+      password: this.password
+    })
   }
   onSubmit(){
     if(this.loginForm.valid){
