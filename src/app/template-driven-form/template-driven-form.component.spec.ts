@@ -84,16 +84,27 @@ describe('TemplateDrivenFormComponent', () => {
   //   expect(errors['minlength']).toBeTruthy();
   // });
   
-  it('onsubmit if form invalid, login button disabled', ()=>{
-    component.onSubmit();
-    expect(submitEl.nativeElement.disabled).toBeTruthy();
-  });
+  it('onsubmit if form invalid, login button disabled', async(()=>{
+    fixture.detectChanges();
+    fixture.whenStable().then(()=>{
+      passwordEl.nativeElement.value = "test";
+      passwordEl.nativeElement.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(submitEl.nativeElement.disabled).toBeTruthy();
+    })
+  }));
   
-  it('onsubmit if form valid, login button enabled', ()=>{
-    userNameEl.nativeElement.value = "linnil";
-    passwordEl.nativeElement.value = "test12";
-    expect(submitEl.nativeElement.disabled).toBeFalsy();
-  });
+  it('onsubmit if form valid, login button enabled', async(()=>{
+    fixture.detectChanges();
+    fixture.whenStable().then(()=>{
+      userNameEl.nativeElement.value = "linnil";
+      userNameEl.nativeElement.dispatchEvent(new Event('input'));
+      passwordEl.nativeElement.value = "1234567";
+      passwordEl.nativeElement.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(submitEl.nativeElement.disabled).toBeFalsy();
+    });
+  }));
   
   it('on submit must create result', ()=>{
     userNameEl.nativeElement.value = "linnil";
